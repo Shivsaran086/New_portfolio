@@ -27,7 +27,102 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+<style>
+  /* General form styling */
+.php-email-form1 {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  padding-bottom: 140px;
+}
 
+.php-email-form1 .form-group {
+  margin-bottom: 20px;
+}
+
+.php-email-form1 label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.php-email-form1 input,
+.php-email-form1 textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.php-email-form1 input:focus,
+.php-email-form1 textarea:focus {
+  border-color: #007bff;
+}
+
+.php-email-form1 textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.php-email-form1 .text-center button {
+  display: inline-block;
+  background: black;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 60px;
+}
+
+.php-email-form1 .text-center button:hover {
+  background: #096b2c;
+}
+
+.php-email-form1 .my-3 {
+  margin-top: 20px;
+}
+
+.php-email-form1 .loading,
+.php-email-form1 .error-message,
+.php-email-form1 .sent-message {
+  display: none;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+
+
+
+.php-email-form1 .sent-message {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  display: block;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .php-email-form1 {
+    padding: 15px;
+  }
+}
+
+</style>
 </head>
 
 <body class="contact-page">
@@ -36,8 +131,7 @@
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+      
         <h1 class="sitename">Shivsaran</h1>
       </a>
 
@@ -109,7 +203,8 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="https://api.web3forms.com/submit" method="post" class="php-email-form1" data-aos="fade-up" data-aos-delay="200">
+              <input type="hidden" name="access_key" value="93303538-fd99-4687-8baa-50c850abcdd1">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -133,9 +228,9 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
+                  <!-- <div class="loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div> -->
 
                   <button type="submit">Send Message</button>
                 </div>
